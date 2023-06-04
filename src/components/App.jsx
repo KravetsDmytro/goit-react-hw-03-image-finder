@@ -1,16 +1,29 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework templa tetest22
-    </div>
-  );
-};
+// import axios from "axios";
+import { Component } from "react";
+// import  Searchbar  from './searchbar/Searchbar.jsx';
+// import axios from "axios";
+
+import FetchGalleryImg from '../API/FetchGaleryImg';
+
+export default class App extends Component {
+
+
+  render() {
+// const {contacts} = this.state;
+// const { filter } = this.state;
+// const filteredResults = this.filterContacts();
+
+    return (
+      <div >
+<FetchGalleryImg/>
+test
+{/* <Searchbar /> */}
+  </div>
+
+
+
+    )
+  }
+}
+
+
