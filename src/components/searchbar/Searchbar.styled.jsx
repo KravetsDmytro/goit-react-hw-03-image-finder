@@ -45,12 +45,12 @@ export const Button = styled.button`
     }
 `
 
-// export const SearchIcon = styled(FaSearch)`
-//     transition: var(--transition);
-//     &:hover {
-//         color: #3f51b5;
-//     }
-// `;
+export const SearchIcon = styled.button`
+    transition: var(--transition);
+    &:hover {
+        color: #3f51b5;
+    }
+`;
 
 export const ButtonLabel = styled.span`
     position: absolute;

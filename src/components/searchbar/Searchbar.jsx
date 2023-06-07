@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Component } from "react";
 import { Header, Form, Button, ButtonLabel, Input } from './Searchbar.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { ReactComponent as SearchIcon } from '../icon/search.svg';
 
 export class Searchbar extends Component  {
     state = {
@@ -29,7 +30,7 @@ export class Searchbar extends Component  {
                 <Form onSubmit={this.handleSubmit}>
                     <Button type="submit"
                         aria-label="Search">
-                        {/* <SearchIcon size={20} /> */}
+                        <SearchIcon width="40px"  height="46px"/>
                         <ButtonLabel>Search</ButtonLabel>
                     </Button>
                     <Input autoComplete="off"
