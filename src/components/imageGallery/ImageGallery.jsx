@@ -16,7 +16,7 @@ export class ImageGallery extends Component {
     };
 
     async componentDidUpdate(prevProps, prevState) {
-        
+
         const { query: previousInquiry } = prevProps;
         const { query: nextInquiry } = this.props;
 
@@ -43,7 +43,7 @@ export class ImageGallery extends Component {
         };
     };
 
-    handleLoadMore = async () => { 
+    handleLoadMore = async () => {
         try {
             const { hits } = await getGalleryImages(this.props.query, this.state.page);
             this.setState(prevState => {
@@ -86,5 +86,13 @@ export class ImageGallery extends Component {
 }
 
 ImageGallery.propTypes = {
+  gallery: PropTypes.arrayOf(
+    PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        tags: PropTypes.string.isRequired,
+        webformatURL: PropTypes.string.isRequired,
+        largeImageURL: PropTypes.string.isRequired,
+    })
+),
     query: PropTypes.string.isRequired,
 };

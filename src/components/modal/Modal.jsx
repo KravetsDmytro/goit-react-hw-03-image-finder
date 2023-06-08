@@ -5,7 +5,7 @@ import { Overlay, ModalStyled } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
-export class Modal extends Component { 
+export class Modal extends Component {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
     };
